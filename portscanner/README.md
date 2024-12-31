@@ -10,7 +10,6 @@ This is a lightweight and efficient TCP port scanner written in Go. The tool all
 - **Progress Bar:** Displays a real-time progress bar during the scanning process.
 - **Timeout Control:** Customizable timeout to avoid hanging on unresponsive ports.
 - **Output to File:** Option to save results to a file.
-- **Graceful Exit Handling:** Recovers from panic and ensures smooth termination.
 
 ---
 
@@ -47,14 +46,14 @@ Run the program with the following command-line arguments:
 
 ### Flags
 
-| Flag        | Default Value | Description                                             |
-|-------------|---------------|---------------------------------------------------------|
-| `-h`        | `127.0.0.1`   | Host to scan.                                           |
-| `-s`        | `1`           | Start port for scanning.                                |
-| `-e`        | `65535`       | End port for scanning.                                  |
-| `-w`        | `10`          | Number of parallel workers for concurrent scanning.     |
-| `-t`        | `0`           | Timeout (in seconds) for a response from each port.     |
-| `-o`        | `""`          | File to save the output. If omitted, results are printed to the console. |
+| Flag | Default Value | Description                                                              |
+| ---- | ------------- | ------------------------------------------------------------------------ |
+| `-h` | `127.0.0.1`   | Host to scan.                                                            |
+| `-s` | `1`           | Start port for scanning.                                                 |
+| `-e` | `65535`       | End port for scanning.                                                   |
+| `-w` | `10`          | Number of parallel workers for concurrent scanning.                      |
+| `-t` | `0`           | Timeout for a response from each port.                                   |
+| `-o` | `""`          | File to save the output. If omitted, results are printed to the console. |
 
 ---
 
@@ -96,9 +95,3 @@ This sets a timeout of 2 seconds for each port scan attempt.
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
-
----
-
-## Author
-
-Developed by GMELUM. Contributions and suggestions are welcome! 🚀
